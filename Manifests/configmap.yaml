@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mlflow
+  namespace: mlflow
+data:
+  MLFLOW_DB_HOST: http://postgres-service.postgres.svc.cluster.local
+  MLFLOW_DB_USER: admin
+  MLFLOW_DB_PORT: "5432"
+  MLFLOW_DB_NAME: postgresdb
+  MLFLOW_ARTIFACT_URI: "https://storageaccount.blob.core.windows.net/container/path/to/blob"
